@@ -6,15 +6,18 @@
       <form action="#">
         <div class="src mt-3 mb-3">
           <label for="src">Source</label>
-           <textarea type="text" class="form-control" id="src" aria-describedby="soruce" placeholder="é me entreu ton taixteu"/>
+          <textarea v-model="text" type="text" class="form-control" id="src" aria-describedby="soruce" placeholder="é me entreu ton taixteu"/>
 
            <button class="btn btn-primary float-right mt-2" name="translate">Randomis-ed</button>
          </div>
          <div class="clearfix"/>
   <div class="output mt-3 mb-4">
     <label for="src">Source</label>
-     <textarea type="text" readonly class="form-control" id="src" aria-describedby="soruce" placeholder="é me entreu ton taixteu"/>
+     <textarea type="text" readonly class="form-control" id="src" aria-describedby="soruce" placeholder="é me le résulta"/>
+    <button class="btn btn-danger float-right mt-2" name="translate">Clipboard-ed</button>
+      <div class="clearfix"/>
   </div>
+
 </form>
 </div>
 </div></div>
@@ -33,7 +36,9 @@ export default {
 <style scoped>
 .interface {
   border-radius: 15px;
-
   background-color: white;
+}
+textarea {
+  min-height: 150px;
 }
 </style>
